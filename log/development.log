@@ -1,0 +1,1930 @@
+  [1m[36m (14.4ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (14.5ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateFoods (20150628180549)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateFoods (20150628180549)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateFoods (20150628180549)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateFoods (20150628180549)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/mputcha/Personal/Health/healthiq/db/migrate/20150628180549_create_foods.rb:6)
+  [1m[35m (11.9ms)[0m  CREATE TABLE `foods` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `glycemic_index` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150628180549')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateExercises (20150628182108)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/mputcha/Personal/Health/healthiq/db/migrate/20150628182108_create_exercises.rb:6)
+  [1m[35m (9.8ms)[0m  CREATE TABLE `exercises` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `exercise_index` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150628182108')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (1.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'healthiq_development'
+  AND fk.table_name = 'exercises'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `exercises`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'healthiq_development'
+  AND fk.table_name = 'foods'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `foods`
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Banana cake, made with sugar', 47, '2015-06-28 18:51:28', '2015-06-28 18:51:28')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Banana cake, made without sugar', 55, '2015-06-28 18:51:28', '2015-06-28 18:51:28')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Sponge cake, plain', 46, '2015-06-28 18:51:28', '2015-06-28 18:51:28')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Vanilla cake made from packet mix with vanilla frosting (Betty Crocker)', 42, '2015-06-28 18:51:28', '2015-06-28 18:51:28')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Apple, made with sugar', 44, '2015-06-28 18:51:28', '2015-06-28 18:51:28')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Apple, made without sugar', 48, '2015-06-28 18:51:28', '2015-06-28 18:51:28')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Waffles, Aunt Jemima (Quaker Oats)', 76, '2015-06-28 18:51:28', '2015-06-28 18:51:28')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Bagel, white, frozen', 72, '2015-06-28 18:51:28', '2015-06-28 18:51:28')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Baguette, white, plain', 95, '2015-06-28 18:51:28', '2015-06-28 18:51:28')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Coarse barley bread, 75-80% kernels, average', 34, '2015-06-28 18:51:28', '2015-06-28 18:51:28')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Hamburger bun', 61, '2015-06-28 18:51:28', '2015-06-28 18:51:28')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Kaiser roll', 73, '2015-06-28 18:51:28', '2015-06-28 18:51:28')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pumpernickel bread', 56, '2015-06-28 18:51:28', '2015-06-28 18:51:28')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('50% cracked wheat kernel bread', 58, '2015-06-28 18:51:28', '2015-06-28 18:51:28')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('White wheat flour bread', 71, '2015-06-28 18:51:28', '2015-06-28 18:51:28')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Wonder™ bread, average', 73, '2015-06-28 18:51:28', '2015-06-28 18:51:28')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Whole wheat bread, average', 71, '2015-06-28 18:51:28', '2015-06-28 18:51:28')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('100% Whole Grain™ bread (Natural Ovens)', 51, '2015-06-28 18:51:28', '2015-06-28 18:51:28')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pita bread, white', 68, '2015-06-28 18:51:28', '2015-06-28 18:51:28')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Corn tortilla', 52, '2015-06-28 18:51:28', '2015-06-28 18:51:28')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Wheat tortilla', 30, '2015-06-28 18:51:28', '2015-06-28 18:51:28')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Coca Cola®, average', 63, '2015-06-28 18:51:28', '2015-06-28 18:51:28')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Fanta®, orange soft drink', 68, '2015-06-28 18:51:28', '2015-06-28 18:51:28')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Lucozade®, original (sparkling glucose drink)', 95, '2015-06-28 18:51:28', '2015-06-28 18:51:28')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Apple juice, unsweetened, average', 44, '2015-06-28 18:51:28', '2015-06-28 18:51:28')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Cranberry juice cocktail (Ocean Spray®)', 68, '2015-06-28 18:51:28', '2015-06-28 18:51:28')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Gatorade', 78, '2015-06-28 18:51:28', '2015-06-28 18:51:28')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Orange juice, unsweetened', 50, '2015-06-28 18:51:28', '2015-06-28 18:51:28')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Tomato juice, canned', 38, '2015-06-28 18:51:28', '2015-06-28 18:51:28')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('All-Bran™, average', 55, '2015-06-28 18:51:28', '2015-06-28 18:51:28')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Coco Pops™, average', 77, '2015-06-28 18:51:28', '2015-06-28 18:51:28')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Cornflakes™, average', 93, '2015-06-28 18:51:28', '2015-06-28 18:51:28')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Cream of Wheat™ (Nabisco)', 66, '2015-06-28 18:51:28', '2015-06-28 18:51:28')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Cream of Wheat™, Instant (Nabisco)', 74, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Grapenuts™, average', 75, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Muesli, average', 66, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Oatmeal, average', 55, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Instant oatmeal, average', 83, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Puffed wheat, average', 80, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Raisin Bran™ (Kellogg\'s)', 61, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Special K™ (Kellogg\'s)', 69, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pearled barley, average', 28, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Sweet corn on the cob, average', 60, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Couscous, average', 65, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Quinoa', 53, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('White rice, average', 89, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Quick cooking white basmati', 67, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Brown rice, average', 50, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Converted, white rice (Uncle Ben\'s®)', 38, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Whole wheat kernels, average', 30, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Bulgur, average', 48, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Graham crackers', 74, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Vanilla wafers', 77, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Shortbread', 64, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Rice cakes, average', 82, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Rye crisps, average', 64, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Soda crackers', 74, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Ice cream, regular', 57, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Ice cream, premium', 38, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Milk, full fat', 41, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Milk, skim', 32, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Reduced-fat yogurt with fruit, average', 33, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Apple, average', 39, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Banana, ripe', 62, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Dates, dried', 42, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Grapefruit', 25, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Grapes, average', 59, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Orange, average', 40, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Peach, average', 42, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Peach, canned in light syrup', 40, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pear, average', 38, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pear, canned in pear juice', 43, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Prunes, pitted', 29, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Raisins', 64, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Watermelon', 72, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Baked beans, average', 40, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Blackeye peas, average', 33, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Black beans', 30, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Chickpeas, average', 10, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Chickpeas, canned in brine', 38, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Navy beans, average', 31, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Kidney beans, average', 29, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Lentils, average', 29, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Soy beans, average', 15, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Cashews, salted', 27, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Peanuts, average', 7, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Fettucini, average', 32, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Macaroni, average', 47, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Macaroni and Cheese (Kraft)', 64, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Spaghetti, white, boiled, average', 46, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Spaghetti, white, boiled 20 min, average', 58, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Spaghetti, wholemeal, boiled, average', 42, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Corn chips, plain, salted, average', 42, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Fruit Roll-Ups®', 99, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('M & M\'s®, peanut', 33, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Microwave popcorn, plain, average', 55, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Potato chips, average', 51, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pretzels, oven-baked', 83, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Snickers Bar®', 51, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Carrots, average', 35, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Parsnips', 52, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Baked russet potato, average', 111, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Boiled white potato, average', 82, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Instant mashed potato, average', 87, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Sweet potato, average', 70, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Yam, average', 54, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Green peas, average', 51, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Hummus (chickpea salad dip)', 6, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Chicken nuggets, frozen, reheated in microwave oven 5 min', 46, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pizza, plain baked dough, served with parmesan cheese and tomato sauce', 80, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pizza, Super Supreme (Pizza Hut)', 36, '2015-06-28 18:51:29', '2015-06-28 18:51:29')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Honey, average', 61, '2015-06-28 18:51:29', '2015-06-28 18:51:29')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Banana cake, made with sugar', 47, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Banana cake, made without sugar', 55, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Sponge cake, plain', 46, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Vanilla cake made from packet mix with vanilla frosting (Betty Crocker)', 42, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Apple, made with sugar', 44, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Apple, made without sugar', 48, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Waffles, Aunt Jemima (Quaker Oats)', 76, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Bagel, white, frozen', 72, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Baguette, white, plain', 95, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Coarse barley bread, 75-80% kernels, average', 34, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Hamburger bun', 61, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Kaiser roll', 73, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pumpernickel bread', 56, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('50% cracked wheat kernel bread', 58, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('White wheat flour bread', 71, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Wonder™ bread, average', 73, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Whole wheat bread, average', 71, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('100% Whole Grain™ bread (Natural Ovens)', 51, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pita bread, white', 68, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Corn tortilla', 52, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Wheat tortilla', 30, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Coca Cola®, average', 63, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Fanta®, orange soft drink', 68, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Lucozade®, original (sparkling glucose drink)', 95, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Apple juice, unsweetened, average', 44, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Cranberry juice cocktail (Ocean Spray®)', 68, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Gatorade', 78, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Orange juice, unsweetened', 50, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Tomato juice, canned', 38, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('All-Bran™, average', 55, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Coco Pops™, average', 77, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Cornflakes™, average', 93, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Cream of Wheat™ (Nabisco)', 66, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Cream of Wheat™, Instant (Nabisco)', 74, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Grapenuts™, average', 75, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Muesli, average', 66, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Oatmeal, average', 55, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Instant oatmeal, average', 83, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Puffed wheat, average', 80, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Raisin Bran™ (Kellogg\'s)', 61, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Special K™ (Kellogg\'s)', 69, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pearled barley, average', 28, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Sweet corn on the cob, average', 60, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Couscous, average', 65, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Quinoa', 53, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('White rice, average', 89, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Quick cooking white basmati', 67, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Brown rice, average', 50, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Converted, white rice (Uncle Ben\'s®)', 38, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Whole wheat kernels, average', 30, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Bulgur, average', 48, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Graham crackers', 74, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Vanilla wafers', 77, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Shortbread', 64, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Rice cakes, average', 82, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Rye crisps, average', 64, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Soda crackers', 74, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Ice cream, regular', 57, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Ice cream, premium', 38, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Milk, full fat', 41, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Milk, skim', 32, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Reduced-fat yogurt with fruit, average', 33, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Apple, average', 39, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Banana, ripe', 62, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Dates, dried', 42, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Grapefruit', 25, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Grapes, average', 59, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Orange, average', 40, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Peach, average', 42, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Peach, canned in light syrup', 40, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pear, average', 38, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pear, canned in pear juice', 43, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Prunes, pitted', 29, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Raisins', 64, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Watermelon', 72, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Baked beans, average', 40, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Blackeye peas, average', 33, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Black beans', 30, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Chickpeas, average', 10, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Chickpeas, canned in brine', 38, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Navy beans, average', 31, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Kidney beans, average', 29, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Lentils, average', 29, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Soy beans, average', 15, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Cashews, salted', 27, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Peanuts, average', 7, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Fettucini, average', 32, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Macaroni, average', 47, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Macaroni and Cheese (Kraft)', 64, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Spaghetti, white, boiled, average', 46, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Spaghetti, white, boiled 20 min, average', 58, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Spaghetti, wholemeal, boiled, average', 42, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Corn chips, plain, salted, average', 42, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Fruit Roll-Ups®', 99, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('M & M\'s®, peanut', 33, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Microwave popcorn, plain, average', 55, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Potato chips, average', 51, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pretzels, oven-baked', 83, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Snickers Bar®', 51, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Carrots, average', 35, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Parsnips', 52, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Baked russet potato, average', 111, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Boiled white potato, average', 82, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Instant mashed potato, average', 87, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Sweet potato, average', 70, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Yam, average', 54, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Green peas, average', 51, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Hummus (chickpea salad dip)', 6, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Chicken nuggets, frozen, reheated in microwave oven 5 min', 46, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pizza, plain baked dough, served with parmesan cheese and tomato sauce', 80, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pizza, Super Supreme (Pizza Hut)', 36, '2015-06-28 18:51:39', '2015-06-28 18:51:39')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Honey, average', 61, '2015-06-28 18:51:39', '2015-06-28 18:51:39')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Banana cake, made with sugar', 47, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Banana cake, made without sugar', 55, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Sponge cake, plain', 46, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Vanilla cake made from packet mix with vanilla frosting (Betty Crocker)', 42, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Apple, made with sugar', 44, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Apple, made without sugar', 48, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Waffles, Aunt Jemima (Quaker Oats)', 76, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Bagel, white, frozen', 72, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Baguette, white, plain', 95, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Coarse barley bread, 75-80% kernels, average', 34, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Hamburger bun', 61, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Kaiser roll', 73, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pumpernickel bread', 56, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('50% cracked wheat kernel bread', 58, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('White wheat flour bread', 71, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Wonder™ bread, average', 73, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Whole wheat bread, average', 71, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('100% Whole Grain™ bread (Natural Ovens)', 51, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pita bread, white', 68, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Corn tortilla', 52, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Wheat tortilla', 30, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Coca Cola®, average', 63, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Fanta®, orange soft drink', 68, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Lucozade®, original (sparkling glucose drink)', 95, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Apple juice, unsweetened, average', 44, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Cranberry juice cocktail (Ocean Spray®)', 68, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Gatorade', 78, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Orange juice, unsweetened', 50, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Tomato juice, canned', 38, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('All-Bran™, average', 55, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Coco Pops™, average', 77, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Cornflakes™, average', 93, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Cream of Wheat™ (Nabisco)', 66, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Cream of Wheat™, Instant (Nabisco)', 74, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Grapenuts™, average', 75, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Muesli, average', 66, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Oatmeal, average', 55, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Instant oatmeal, average', 83, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Puffed wheat, average', 80, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Raisin Bran™ (Kellogg\'s)', 61, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Special K™ (Kellogg\'s)', 69, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pearled barley, average', 28, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Sweet corn on the cob, average', 60, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Couscous, average', 65, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Quinoa', 53, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('White rice, average', 89, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Quick cooking white basmati', 67, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Brown rice, average', 50, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Converted, white rice (Uncle Ben\'s®)', 38, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Whole wheat kernels, average', 30, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Bulgur, average', 48, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Graham crackers', 74, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Vanilla wafers', 77, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Shortbread', 64, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Rice cakes, average', 82, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Rye crisps, average', 64, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Soda crackers', 74, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Ice cream, regular', 57, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Ice cream, premium', 38, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Milk, full fat', 41, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Milk, skim', 32, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Reduced-fat yogurt with fruit, average', 33, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Apple, average', 39, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Banana, ripe', 62, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Dates, dried', 42, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Grapefruit', 25, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Grapes, average', 59, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Orange, average', 40, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Peach, average', 42, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Peach, canned in light syrup', 40, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pear, average', 38, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pear, canned in pear juice', 43, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Prunes, pitted', 29, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Raisins', 64, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Watermelon', 72, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Baked beans, average', 40, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Blackeye peas, average', 33, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Black beans', 30, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Chickpeas, average', 10, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Chickpeas, canned in brine', 38, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Navy beans, average', 31, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Kidney beans, average', 29, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Lentils, average', 29, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Soy beans, average', 15, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Cashews, salted', 27, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Peanuts, average', 7, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Fettucini, average', 32, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Macaroni, average', 47, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Macaroni and Cheese (Kraft)', 64, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Spaghetti, white, boiled, average', 46, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Spaghetti, white, boiled 20 min, average', 58, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Spaghetti, wholemeal, boiled, average', 42, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Corn chips, plain, salted, average', 42, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Fruit Roll-Ups®', 99, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('M & M\'s®, peanut', 33, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Microwave popcorn, plain, average', 55, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Potato chips, average', 51, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pretzels, oven-baked', 83, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Snickers Bar®', 51, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Carrots, average', 35, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Parsnips', 52, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Baked russet potato, average', 111, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Boiled white potato, average', 82, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Instant mashed potato, average', 87, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Sweet potato, average', 70, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Yam, average', 54, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Green peas, average', 51, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Hummus (chickpea salad dip)', 6, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Chicken nuggets, frozen, reheated in microwave oven 5 min', 46, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pizza, plain baked dough, served with parmesan cheese and tomato sauce', 80, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Pizza, Super Supreme (Pizza Hut)', 36, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `foods` (`name`, `glycemic_index`, `created_at`, `updated_at`) VALUES ('Honey, average', 61, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `exercises` (`name`, `exercise_index`, `created_at`, `updated_at`) VALUES ('Crunches', 20, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `exercises` (`name`, `exercise_index`, `created_at`, `updated_at`) VALUES ('Walking', 15, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `exercises` (`name`, `exercise_index`, `created_at`, `updated_at`) VALUES ('Running', 40, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `exercises` (`name`, `exercise_index`, `created_at`, `updated_at`) VALUES ('Sprinting', 60, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `exercises` (`name`, `exercise_index`, `created_at`, `updated_at`) VALUES ('Squats', 60, '2015-06-28 18:52:06', '2015-06-28 18:52:06')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `exercises` (`name`, `exercise_index`, `created_at`, `updated_at`) VALUES ('Bench press', 45, '2015-06-28 18:52:06', '2015-06-28 18:52:06')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (11.1ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (22.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateBloodSugarEffectors (20150628190241)
+  [1m[35m (11.4ms)[0m  CREATE TABLE `blood_sugar_effectors` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150628190241')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'healthiq_development'
+  AND fk.table_name = 'blood_sugar_effectors'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `blood_sugar_effectors`
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to CreateBloodSugarEffectors (20150628190241)
+  [1m[36m (2.1ms)[0m  [1mDROP TABLE `blood_sugar_effectors`[0m
+  [1m[35mSQL (2.5ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20150628190241'
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateBloodSugarEffectors (20150628190241)
+  [1m[35m (11.9ms)[0m  CREATE TABLE `blood_sugar_effectors` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150628190241')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'healthiq_development'
+  AND fk.table_name = 'blood_sugar_effectors'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `blood_sugar_effectors`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'healthiq_development'
+  AND fk.table_name = 'blood_sugar_effectors'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `blood_sugar_effectors`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'healthiq_development'
+  AND fk.table_name = 'blood_sugar_effectors'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `blood_sugar_effectors`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'healthiq_development'
+  AND fk.table_name = 'blood_sugar_effectors'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `blood_sugar_effectors`[0m
+  [1m[36m (13.6ms)[0m  [1mCREATE TABLE `blood_sugar_effectors` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (9.3ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36m (13.8ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) [0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('0')[0m
+  [1m[36m (1.9ms)[0m  [1mDROP TABLE `blood_sugar_effectors` CASCADE[0m
+  [1m[35m (8.9ms)[0m  CREATE TABLE `blood_sugar_effectors` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[36m (2.1ms)[0m  [1mDROP TABLE `blood_sugar_effectors` CASCADE[0m
+  [1m[35m (14.5ms)[0m  CREATE TABLE `blood_sugar_effectors` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[36m (18.6ms)[0m  [1mCREATE TABLE `blood_sugar_effectors` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `index` int(11) NOT NULL, `type` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20150628182108')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateBloodSugarEffectors (20150628190241)
+  [1m[35m (1.0ms)[0m  CREATE TABLE `blood_sugar_effectors` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `index` int(11) NOT NULL, `type` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+Mysql2::Error: Table 'blood_sugar_effectors' already exists: CREATE TABLE `blood_sugar_effectors` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `index` int(11) NOT NULL, `type` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'healthiq_development'
+  AND fk.table_name = 'blood_sugar_effectors'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `blood_sugar_effectors`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateBloodSugarEffectors (20150628190241)
+  [1m[35m (0.5ms)[0m  CREATE TABLE `blood_sugar_effectors` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `index` int(11) NOT NULL, `type` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+Mysql2::Error: Table 'blood_sugar_effectors' already exists: CREATE TABLE `blood_sugar_effectors` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `index` int(11) NOT NULL, `type` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'healthiq_development'
+  AND fk.table_name = 'blood_sugar_effectors'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `blood_sugar_effectors`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateBloodSugarEffectors (20150628190241)
+  [1m[35m (0.5ms)[0m  CREATE TABLE `blood_sugar_effectors` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `index` int(11) NOT NULL, `type` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+Mysql2::Error: Table 'blood_sugar_effectors' already exists: CREATE TABLE `blood_sugar_effectors` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `index` int(11) NOT NULL, `type` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (9.3ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (13.3ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateBloodSugarEffectors (20150628190241)
+  [1m[35m (13.9ms)[0m  CREATE TABLE `blood_sugar_effectors` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `index` int(11) NOT NULL, `type` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150628190241')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'healthiq_development'
+  AND fk.table_name = 'blood_sugar_effectors'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `blood_sugar_effectors`
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Banana cake, made with sugar', 47, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Banana cake, made without sugar', 55, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Sponge cake, plain', 46, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Vanilla cake made from packet mix with vanilla frosting (Betty Crocker)', 42, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Apple, made with sugar', 44, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Apple, made without sugar', 48, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Waffles, Aunt Jemima (Quaker Oats)', 76, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Bagel, white, frozen', 72, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Baguette, white, plain', 95, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Coarse barley bread, 75-80% kernels, average', 34, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Hamburger bun', 61, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Kaiser roll', 73, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Pumpernickel bread', 56, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', '50% cracked wheat kernel bread', 58, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'White wheat flour bread', 71, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Wonder™ bread, average', 73, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Whole wheat bread, average', 71, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', '100% Whole Grain™ bread (Natural Ovens)', 51, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Pita bread, white', 68, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Corn tortilla', 52, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Wheat tortilla', 30, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Coca Cola®, average', 63, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Fanta®, orange soft drink', 68, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Lucozade®, original (sparkling glucose drink)', 95, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Apple juice, unsweetened, average', 44, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Cranberry juice cocktail (Ocean Spray®)', 68, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Gatorade', 78, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Orange juice, unsweetened', 50, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Tomato juice, canned', 38, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'All-Bran™, average', 55, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Coco Pops™, average', 77, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Cornflakes™, average', 93, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Cream of Wheat™ (Nabisco)', 66, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Cream of Wheat™, Instant (Nabisco)', 74, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Grapenuts™, average', 75, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Muesli, average', 66, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Oatmeal, average', 55, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Instant oatmeal, average', 83, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Puffed wheat, average', 80, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Raisin Bran™ (Kellogg\'s)', 61, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Special K™ (Kellogg\'s)', 69, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Pearled barley, average', 28, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Sweet corn on the cob, average', 60, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Couscous, average', 65, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Quinoa', 53, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'White rice, average', 89, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Quick cooking white basmati', 67, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Brown rice, average', 50, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Converted, white rice (Uncle Ben\'s®)', 38, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Whole wheat kernels, average', 30, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Bulgur, average', 48, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Graham crackers', 74, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Vanilla wafers', 77, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Shortbread', 64, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Rice cakes, average', 82, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Rye crisps, average', 64, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Soda crackers', 74, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Ice cream, regular', 57, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Ice cream, premium', 38, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Milk, full fat', 41, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Milk, skim', 32, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Reduced-fat yogurt with fruit, average', 33, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Apple, average', 39, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Banana, ripe', 62, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Dates, dried', 42, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Grapefruit', 25, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Grapes, average', 59, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Orange, average', 40, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Peach, average', 42, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Peach, canned in light syrup', 40, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Pear, average', 38, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Pear, canned in pear juice', 43, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Prunes, pitted', 29, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Raisins', 64, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Watermelon', 72, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Baked beans, average', 40, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Blackeye peas, average', 33, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Black beans', 30, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Chickpeas, average', 10, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Chickpeas, canned in brine', 38, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Navy beans, average', 31, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Kidney beans, average', 29, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Lentils, average', 29, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Soy beans, average', 15, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Cashews, salted', 27, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Peanuts, average', 7, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Fettucini, average', 32, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Macaroni, average', 47, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Macaroni and Cheese (Kraft)', 64, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Spaghetti, white, boiled, average', 46, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Spaghetti, white, boiled 20 min, average', 58, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Spaghetti, wholemeal, boiled, average', 42, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Corn chips, plain, salted, average', 42, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Fruit Roll-Ups®', 99, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'M & M\'s®, peanut', 33, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Microwave popcorn, plain, average', 55, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Potato chips, average', 51, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Pretzels, oven-baked', 83, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Snickers Bar®', 51, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Carrots, average', 35, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Parsnips', 52, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Baked russet potato, average', 111, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Boiled white potato, average', 82, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Instant mashed potato, average', 87, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Sweet potato, average', 70, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Yam, average', 54, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Green peas, average', 51, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Hummus (chickpea salad dip)', 6, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Chicken nuggets, frozen, reheated in microwave oven 5 min', 46, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Pizza, plain baked dough, served with parmesan cheese and tomato sauce', 80, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Pizza, Super Supreme (Pizza Hut)', 36, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Honey, average', 61, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Exercise', 'Crunches', 20, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Exercise', 'Walking', 15, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Exercise', 'Running', 40, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Exercise', 'Sprinting', 60, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Exercise', 'Squats', 60, '2015-06-28 19:35:01', '2015-06-28 19:35:01')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Exercise', 'Bench press', 45, '2015-06-28 19:35:01', '2015-06-28 19:35:01')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Banana cake, made with sugar', 47, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Banana cake, made without sugar', 55, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Sponge cake, plain', 46, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Vanilla cake made from packet mix with vanilla frosting (Betty Crocker)', 42, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Apple, made with sugar', 44, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Apple, made without sugar', 48, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Waffles, Aunt Jemima (Quaker Oats)', 76, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Bagel, white, frozen', 72, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Baguette, white, plain', 95, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Coarse barley bread, 75-80% kernels, average', 34, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Hamburger bun', 61, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Kaiser roll', 73, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Pumpernickel bread', 56, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', '50% cracked wheat kernel bread', 58, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'White wheat flour bread', 71, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Wonder™ bread, average', 73, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Whole wheat bread, average', 71, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', '100% Whole Grain™ bread (Natural Ovens)', 51, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Pita bread, white', 68, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Corn tortilla', 52, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Wheat tortilla', 30, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Coca Cola®, average', 63, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Fanta®, orange soft drink', 68, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Lucozade®, original (sparkling glucose drink)', 95, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Apple juice, unsweetened, average', 44, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Cranberry juice cocktail (Ocean Spray®)', 68, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Gatorade', 78, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Orange juice, unsweetened', 50, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Tomato juice, canned', 38, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'All-Bran™, average', 55, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Coco Pops™, average', 77, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Cornflakes™, average', 93, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Cream of Wheat™ (Nabisco)', 66, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Cream of Wheat™, Instant (Nabisco)', 74, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Grapenuts™, average', 75, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Muesli, average', 66, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Oatmeal, average', 55, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Instant oatmeal, average', 83, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Puffed wheat, average', 80, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Raisin Bran™ (Kellogg\'s)', 61, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Special K™ (Kellogg\'s)', 69, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Pearled barley, average', 28, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Sweet corn on the cob, average', 60, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Couscous, average', 65, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Quinoa', 53, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'White rice, average', 89, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Quick cooking white basmati', 67, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Brown rice, average', 50, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Converted, white rice (Uncle Ben\'s®)', 38, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Whole wheat kernels, average', 30, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Bulgur, average', 48, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Graham crackers', 74, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Vanilla wafers', 77, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Shortbread', 64, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Rice cakes, average', 82, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Rye crisps, average', 64, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Soda crackers', 74, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Ice cream, regular', 57, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Ice cream, premium', 38, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Milk, full fat', 41, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Milk, skim', 32, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Reduced-fat yogurt with fruit, average', 33, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Apple, average', 39, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Banana, ripe', 62, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Dates, dried', 42, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Grapefruit', 25, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Grapes, average', 59, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Orange, average', 40, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Peach, average', 42, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Peach, canned in light syrup', 40, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Pear, average', 38, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Pear, canned in pear juice', 43, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Prunes, pitted', 29, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Raisins', 64, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Watermelon', 72, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Baked beans, average', 40, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Blackeye peas, average', 33, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Black beans', 30, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Chickpeas, average', 10, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Chickpeas, canned in brine', 38, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Navy beans, average', 31, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Kidney beans, average', 29, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Lentils, average', 29, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Soy beans, average', 15, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Cashews, salted', 27, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Peanuts, average', 7, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Fettucini, average', 32, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Macaroni, average', 47, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Macaroni and Cheese (Kraft)', 64, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Spaghetti, white, boiled, average', 46, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Spaghetti, white, boiled 20 min, average', 58, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Spaghetti, wholemeal, boiled, average', 42, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Corn chips, plain, salted, average', 42, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Fruit Roll-Ups®', 99, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'M & M\'s®, peanut', 33, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Microwave popcorn, plain, average', 55, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Potato chips, average', 51, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Pretzels, oven-baked', 83, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Snickers Bar®', 51, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Carrots, average', 35, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Parsnips', 52, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Baked russet potato, average', 111, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Boiled white potato, average', 82, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Instant mashed potato, average', 87, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Sweet potato, average', 70, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Yam, average', 54, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Green peas, average', 51, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Hummus (chickpea salad dip)', 6, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Chicken nuggets, frozen, reheated in microwave oven 5 min', 46, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Pizza, plain baked dough, served with parmesan cheese and tomato sauce', 80, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Pizza, Super Supreme (Pizza Hut)', 36, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Food', 'Honey, average', 61, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Exercise', 'Crunches', 20, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Exercise', 'Walking', 15, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Exercise', 'Running', 40, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Exercise', 'Sprinting', 60, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Exercise', 'Squats', 60, '2015-06-28 19:36:20', '2015-06-28 19:36:20')
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `blood_sugar_effectors` (`type`, `name`, `index`, `created_at`, `updated_at`) VALUES ('Exercise', 'Bench press', 45, '2015-06-28 19:36:20', '2015-06-28 19:36:20')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mFood Load (0.4ms)[0m  [1mSELECT  `blood_sugar_effectors`.* FROM `blood_sugar_effectors` WHERE `blood_sugar_effectors`.`type` IN ('Food')  ORDER BY `blood_sugar_effectors`.`id` ASC LIMIT 1[0m
+  [1m[35mBloodSugarEffector Load (0.4ms)[0m  SELECT  `blood_sugar_effectors`.* FROM `blood_sugar_effectors`  ORDER BY `blood_sugar_effectors`.`id` ASC LIMIT 1
+  [1m[36mFood Load (0.2ms)[0m  [1mSELECT  `blood_sugar_effectors`.* FROM `blood_sugar_effectors` WHERE `blood_sugar_effectors`.`type` IN ('Food')  ORDER BY `blood_sugar_effectors`.`id` ASC LIMIT 1[0m
+  [1m[35mFood Load (0.3ms)[0m  SELECT  `blood_sugar_effectors`.* FROM `blood_sugar_effectors` WHERE `blood_sugar_effectors`.`type` IN ('Food')  ORDER BY `blood_sugar_effectors`.`id` ASC LIMIT 1
+  [1m[36mFood Load (0.2ms)[0m  [1mSELECT  `blood_sugar_effectors`.* FROM `blood_sugar_effectors` WHERE `blood_sugar_effectors`.`type` IN ('Food')  ORDER BY `blood_sugar_effectors`.`id` ASC LIMIT 1[0m
+  [1m[35mFood Load (0.2ms)[0m  SELECT  `blood_sugar_effectors`.* FROM `blood_sugar_effectors` WHERE `blood_sugar_effectors`.`type` IN ('Food')  ORDER BY `blood_sugar_effectors`.`id` ASC LIMIT 1
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT  `blood_sugar_effectors`.* FROM `blood_sugar_effectors` WHERE `blood_sugar_effectors`.`type` IN ('Exercise')  ORDER BY `blood_sugar_effectors`.`id` ASC LIMIT 1[0m
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  `blood_sugar_effectors`.* FROM `blood_sugar_effectors` WHERE `blood_sugar_effectors`.`type` IN ('Exercise')  ORDER BY `blood_sugar_effectors`.`id` ASC LIMIT 1
