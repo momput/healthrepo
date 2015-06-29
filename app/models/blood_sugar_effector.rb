@@ -9,4 +9,13 @@ class BloodSugarEffector < ActiveRecord::Base
       self.type == method
     end
   end
+
+  def change_per_minute
+    -1
+  end
+
+  def effect_in_mins
+    1
+  end
+
 end

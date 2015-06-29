@@ -5,4 +5,8 @@ class Exercise < BloodSugarEffector
     -(index/EFFECT_IN_MINS)
   end
 
+  def effect_in_mins
+    EFFECT_IN_MINS
+  end
+
 end
