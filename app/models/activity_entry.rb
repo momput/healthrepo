@@ -16,7 +16,7 @@ class ActivityEntry
       @beginning_of_day = DateTime.now.beginning_of_day
       #((DateTime.now-800.minutes-DateTime.now.beginning_of_day)*24*60).to_f.round
       @offset_start = ((options[:time] - @beginning_of_day) * 24 * 60 ).to_f.round
-      @offset_end = @offset_start + options[:effector].effect_in_mins
+      @offset_end = (@offset_start + options[:effector].effect_in_mins).to_i
       @activity = options[:effector]
     end
   end

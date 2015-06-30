@@ -1,7 +1,7 @@
 class BloodSugarEffector < ActiveRecord::Base
 
   def self.types
-    ["Food", "Exercise"]
+    ["Food", "Exercise", "Sleep"]
   end
 
   self.types.each do | method |
@@ -16,6 +16,10 @@ class BloodSugarEffector < ActiveRecord::Base
 
   def effect_in_mins
     1
+  end
+
+  def is_active?
+    ["Food", "Exercise"].include? self.type
   end
 
 end
